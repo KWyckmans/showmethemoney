@@ -12,11 +12,11 @@ class Statement(object):
     - Amount: Amount of money received or transferred,
     - Timestamp: The date of the transaction
     '''
-    def __init__(self, description, amount, timestamp):
+    def __init__(self, description, amount, timestamp, recipient):
         self.description = description
         self.amount = amount
         self.timestamp = timestamp
-
+        self.recipient = recipient
 
 def main():
     pass

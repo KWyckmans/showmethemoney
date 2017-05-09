@@ -16,6 +16,6 @@ def statement_file(tmpdir_factory):
 
 def test_statement_initializes():
     statement = money.Statement(description="Carrefour",
-                                amount=20.32, timestamp=datetime.datetime.now())
+                                amount=20.32, timestamp=datetime.datetime.now(), recipient="Carrefour")
 
     assert statement.description == "Carrefour"
