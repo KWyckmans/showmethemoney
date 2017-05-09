@@ -19,3 +19,10 @@ def test_statement_initializes():
                                 amount=20.32, timestamp=datetime.datetime.now(), recipient="Carrefour")
 
     assert statement.description == "Carrefour"
+
+def test_load_statements_from_file():
+    parser_factory = money.StatementParserFactory()
+    parser = parser_factory.create_parser('ing')
+    money.STATEMENTS = parser.parse(statement_file)
+
+    assert len(money.STATEMENTS) > 0
